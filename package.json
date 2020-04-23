@@ -1,6 +1,6 @@
 {
   "name": "ffprobe-duration",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Get video/audio duration using ffprobe",
   "main": "index.js",
   "bin": {
@@ -11,5 +11,9 @@
   },
   "author": "laggingreflex",
   "repository": "laggingreflex/node-video-duration",
-  "keywords": ["video", "duration", "ffprobe"]
+  "keywords": [
+    "video",
+    "duration",
+    "ffprobe"
+  ]
 }
