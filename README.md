@@ -1,22 +1,29 @@
+# ffprobe-duration
 
-# node-video-duration
+Yet another NodeJS module that retrieves the duration of video/audio assets.
 
-NodeJs module that retrieves the duration of video/audio assets. Requires `ffprobe` binary installed.
-
+**Note:** Requires [ffprobe] binary installed and accessible via CLI.
 
 ## Install
 
-```bash
-$ npm install --save node-video-duration
+```sh
+$ npm install --save ffprobe-duration
 ```
 
 ### Usage
 
 ```js
-const getVideoDuration = require('node-video-duration');
+const getDuration = require('ffprobe-duration');
 
-getVideoDuration('http://distribution.bbb3d.renderfarming.net/video/mp4/bbb_sunflower_1080p_30fps_normal.mp4')
-    .then((duration) => {
-        console.log('Asset duration: ' + duration);
-    });
+const duration = await getDuration('http://distribution.bbb3d.renderfarming.net/video/mp4/bbb_sunflower_1080p_30fps_normal.mp4');
+
+console.log('Duration:', duration);
 ```
+
+### CLI
+
+```sh
+duration http://distribution.bbb3d.renderfarming.net/video/mp4/bbb_sunflower_1080p_30fps_normal.mp4
+```
+
+[ffprobe]: https://ffmpeg.org/ffprobe.html
